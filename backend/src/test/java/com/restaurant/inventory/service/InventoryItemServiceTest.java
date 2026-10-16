@@ -38,6 +38,7 @@ public class InventoryItemServiceTest {
         InventoryItem item = new InventoryItem();
         item.setId(1L);
         item.setQuantityInStock(50.0);
+        item.setReorderLevel(10.0);
 
         when(inventoryItemRepository.findById(1L)).thenReturn(Optional.of(item));
         when(inventoryItemRepository.save(any())).thenReturn(item);
